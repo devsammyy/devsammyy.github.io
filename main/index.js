@@ -7,6 +7,8 @@ function todoAction() {
     ul.addEventListener('click', removeTodo);
     ul.addEventListener('click', checkTodo);
     function addTodo() {
+        if (todoValue.value === '')
+            return;
         //Create todo container
         const div = document.createElement('div');
         div.classList.add('todo-items');

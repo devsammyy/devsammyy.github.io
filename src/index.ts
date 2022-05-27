@@ -8,6 +8,7 @@ function todoAction(){
     ul.addEventListener('click', checkTodo)
     function addTodo(){
          
+            if(todoValue.value === '') return
             //Create todo container
             const div = document.createElement('div')
             div.classList.add('todo-items')
@@ -44,7 +45,7 @@ function todoAction(){
     }
 }
 
-function removeTodo(e){
+function removeTodo(e:any){
 
     const item = e.target
 
@@ -55,7 +56,7 @@ function removeTodo(e){
 
 }
 
-function checkTodo(e){
+function checkTodo(e:any){
 
     const item = e.target
 
